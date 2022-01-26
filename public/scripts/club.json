@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "club": "Corinthians",  
+        "route": "league/bra/corinthians"
+    },
+    {
+        "id": 1,
+        "club": "Palmeiras",
+        "route": "league/bra/palmeiras"
+    },
+    {
+        "id": 3,
+        "club": "São Paulo",
+        "route": "league/bra/saopaulo"
+    }
+]

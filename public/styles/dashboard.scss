@@ -1,0 +1,283 @@
+@import "global";
+@import "carousel";
+        
+.content{
+    width: 100%;
+    height: 100%;
+    background-color: $darkerBlue !important;
+    padding: 3rem;
+    gap: 2rem;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    
+    .content-header{
+        display: flex;
+        gap: 1rem;
+        flex-basis: 48.5%;
+        color: #00A3FF;
+        flex-direction: column;
+        justify-content: center;
+            
+        .leagues-box, .clubs-box, .about-box, .players-box{
+            display: flex;
+            padding: 0 2rem;
+            align-items: center;
+            gap: 3rem;
+            height: 6rem;
+            background-color: $darkBlue;
+            border: 3px solid $borderBlue;
+            border-radius: .5rem;
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,.85));
+
+            h2{
+                font-size: 1.25rem;
+            }
+
+            &:hover{
+                cursor: pointer;
+                background-color: $borderBlue;
+                color: $white;
+                filter: none;
+                transform: translateY(.25rem);
+            }
+
+            .material-icons{
+                font-size: 2.5rem;
+            }
+        }
+        .news-box { 
+            height: 95%;
+            flex-basis: 25%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            .news-content{
+                margin: .5rem;
+                padding: .75rem .5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $darkBlue;
+                color: $orange;
+                height: 25%;
+                width: 100%;
+            }
+        }
+    }
+
+    .content-section{
+            height: 98.5%;
+            width: 100%;
+            gap: 2rem;
+            display: grid;
+            .box-content{
+                flex-basis: 50%;
+                height: 100%;
+                .item-news{
+                    h2{
+                        color: $white !important;
+                    }
+                    p{
+                        color: $smallText !important;
+                        text-indent: 0 !important;
+                        padding: 0;
+                        font-size: 1rem;
+                    }
+                }
+                h2{
+                    padding-bottom: 1rem;
+                    color: $softBlue;
+                }
+                p{
+                    text-align: justify;
+                    text-indent: .85rem;
+                    padding: .45rem 0;
+                    color: $darkBlue;
+                }
+            }
+            .box-about{
+                background-color: #fffffff2;
+                padding: 2rem;
+                height: 37vh !important;
+                border-radius: 1rem;
+                filter: drop-shadow(2px 4px 6px black);
+            }
+    }
+}
+
+.content-dashboard{
+    height: 95vh !important;
+}
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    body{
+        .sidebar{
+            ul{
+                li{ 
+                    a{
+                        img {
+                            width: 100% !important;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+            ul.list-item{
+                display: none !important;
+            }
+            ul.logo{
+                display: flex;
+                justify-content: center;
+                padding: 0;
+                li{
+                    width: 100%;
+                    padding: .75rem;
+                }
+            }
+            ul.menu-icon{
+                display: flex !important;
+                align-items: center;
+                color: $white;
+                .material-icons{
+                    font-size: 2rem;
+                }
+            }
+        }
+        .content{
+            width: 100%;
+            height: 100%;
+            background-color: #050a3b !important;
+            padding: 1rem;
+            gap: 0;
+            display: flex;
+            flex-direction: column-reverse;
+            overflow-y:scroll;
+            .content-header, .content-section{
+                width: 100%;
+            }
+
+            .content-section{
+                height: auto;
+                margin: 1rem 0;
+                .box-content{
+                    .slideshow-container{
+                        .item-news{
+                            .text{
+                                color: #f2f2f2;
+                                font-size: .7rem;
+                                padding: 1rem !important;
+                                position: absolute;
+                                bottom: 0;
+                                width: 100%;
+                                background: linear-gradient(to top, black, transparent);
+                                border-radius: 0 1rem 0;
+                                p{
+                                    display: none;
+                                }                  
+                            }
+                        }
+                    }
+                }
+            }
+            .content-header{
+                margin: 1rem 0;
+                *{
+                    h2{
+                        font-size: 1.1rem !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    body{
+        background-color: #050a3b;
+        .sidebar{
+            ul{
+                li{ 
+                    a{
+                        img {
+                            width: 100% !important;
+                            
+                        }
+                    }
+                }
+            }
+            ul.list-item{
+                display: none !important;
+            }
+            ul.logo{
+                display: flex;
+                justify-content: center;
+                padding: 0;
+                li{
+                    width: 100%;
+                    padding: .75rem;
+                }
+            }
+            ul.menu-icon{
+                display: flex !important;
+                align-items: center;
+                color: $white;
+                .material-icons{
+                    font-size: 2rem;
+                }
+            }
+        }
+        .content{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column-reverse;
+            overflow-y: scroll;
+            .content-header, .content-section{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {  
+    body{
+        .sidebar{
+            ul.logo{
+                display: flex;
+                justify-content: center;
+                padding: 0;
+                li{
+                    width: 100%;
+                    padding: .75rem;
+                }
+            }
+        }
+        .content{
+            display: flex;
+            flex-direction: column-reverse;
+            overflow-y: scroll;
+            .content-header, .content-section{
+                width: 100%;
+            }
+            .content-section{
+                height: auto;
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+}

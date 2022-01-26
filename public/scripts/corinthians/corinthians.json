@@ -1,0 +1,61 @@
+[
+    {
+        "id": 1,
+        "club": "Corinthians",
+        "player": [
+            {
+                "id": "SCCP_01",
+                "name": "Cássio",
+                "position": "Goleiro",
+                "shirt": 12,
+                "age": 34,
+                "marketValue": "€ 2 mi"
+            },
+            {
+                "id": "SCCP_02",
+                "name": "Matheus Donelli",
+                "position": "Goleiro",
+                "shirt": 32,
+                "age": 19,
+                "marketValue": "€ 1.5 mi"
+            },
+            {
+                "id": "SCCP_02",
+                "name": "João Victor",
+                "position": "Zagueiro",
+                "shirt": 33,
+                "age": 23,
+                "marketValue": "€ 7.0 mi"
+            },
+            {
+                "id": "SCCP_02",
+                "name": "Robson Bambu",
+                "position": "Zagueiro",
+                "shirt": "-",
+                "age": 24,
+                "marketValue": "€ 3.0 mi"
+            },
+            {
+                "id": "SCCP_02",
+                "name": "Gil",
+                "position": "Zagueiro",
+                "shirt": 123,
+                "age": 4,
+                "marketValue": "€ 2.3 mi"
+            }
+
+        ],
+        "league": [
+            {
+                "name":"Paulistão"
+            },
+            {
+                "name":"Libertadores"
+            },
+            {
+                "name":"Campeonato Brasileiro"
+            }
+        ],
+        "route": "league/bra/corinthians"
+    }
+]

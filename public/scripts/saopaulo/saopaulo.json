@@ -1,0 +1,116 @@
+[
+    {
+        "id": 1,
+        "club": "São Paulo",
+        "player": [
+            {
+                "id": "SPFC_01",
+                "name": "Tiago Volpi",
+                "position": "Goleiro",
+                "shirt": 1,
+                "age": 31,
+                "marketValue": "€ 3 mi"
+            },
+            {
+                "id": "SPFC_02",
+                "name": "Jandrei",
+                "position": "Goleiro",
+                "shirt": 93,
+                "age": 28,
+                "marketValue": "€ 800 mil"
+            },
+            {
+                "id": "SPFC_03",
+                "name": "Thiago Couto",
+                "position": "Goleiro",
+                "shirt": 40,
+                "age": 22,
+                "marketValue": "€ 100 mil"
+            },
+            {
+                "id": "SPFC_04",
+                "name": "Léo",
+                "position": "Zagueiro",
+                "shirt": 16,
+                "age": 26,
+                "marketValue": "€ 2.7 mi"
+            },
+            {
+                "id": "SPFC_05",
+                "name": "Robert Arboleda",
+                "position": "Zagueiro",
+                "shirt": 5,
+                "age": 30,
+                "marketValue": "€ 2.2 mi"
+            },
+            {
+                "id": "SPFC_06",
+                "name": "Diego Costa",
+                "position": "Zagueiro",
+                "shirt": 4,
+                "age": 22,
+                "marketValue": "€ 1.8 mi"
+            },
+            {
+                "id": "SPFC_07",
+                "name": "Walce",
+                "position": "Zagueiro",
+                "shirt": 43,
+                "age": 22,
+                "marketValue": "€ 1.5 mi"
+            },
+            {
+                "id": "SPFC_08",
+                "name": "Miranda",
+                "position": "Zagueiro",
+                "shirt": 22,
+                "age": 37,
+                "marketValue": "€ 800 mil"
+            },
+            {
+                "id": "SPFC_09",
+                "name": "Reinaldo",
+                "position": "Lateral",
+                "shirt": 6,
+                "age": 32,
+                "marketValue": "€ 1.8 mi"
+            },
+            {
+                "id": "SPFC_10",
+                "name": "Welington",
+                "position": "Lateral",
+                "shirt": 34,
+                "age": 20,
+                "marketValue": "€ 1.5 mi"
+            },
+            {
+                "id": "SPFC_11",
+                "name": "Igor Vinícius",
+                "position": "Lateral",
+                "shirt": 2,
+                "age": 24,
+                "marketValue": "€ 2.5 mi"
+            },
+            {
+                "id": "SPFC_12",
+                "name": "Rafinha",
+                "position": "Lateral",
+                "shirt": 13,
+                "age": 36,
+                "marketValue": "€ 600 mil"
+            }
+        ],
+        "league": [
+            {
+                "name":"Paulistão"
+            },
+            {
+                "name":"Sulamericana"
+            },
+            {
+                "name":"Campeonato Brasileiro"
+            }
+        ],
+        "route": "league/bra/saopaulo"
+    }
+]

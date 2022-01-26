@@ -1,0 +1,61 @@
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.item-news {
+  display: none;
+  img{
+    width: 100%;
+    opacity: .6;
+    border-radius: 1rem 1rem 0 1rem;
+    &::after{
+      content: '';
+      top: 0;
+      left: 0;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0,0,0,.5);
+    }
+    
+  }
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 3rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top, black, transparent);
+    border-radius: 0 1rem 0;
+    small{
+      color: #f2f2f277;
+      a{
+        text-decoration: none;
+        color: #f2f2f277;
+      }
+    }
+  }
+}
+
+.dot {
+  cursor: pointer;
+  height: 1.15rem;
+  width: 1.15rem;
+  margin: .5rem .25rem;
+  border: .125rem solid rgb(1,51,201);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {background-color: rgb(1,51,201);}
+
+.fade {animation: fade 1.5s;}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}

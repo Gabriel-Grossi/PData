@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Dashboard | PData</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <ul class="logo">
+            <li>
+                <a href="">
+                    <img src="assets/logo-xl.svg" alt="">
+                </a>
+            </li>
+        </ul>
+        <ul class="list-item">
+            <li>
+                <a href="">
+                    <span class="material-icons">
+                        home
+                    </span>
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="/club">
+                    <span class="material-icons">
+                        sports_soccer
+                    </span>
+                    Clubes
+                </a>
+            </li>
+            <li>
+                <a href="/" class="logout">
+                    <span class="material-icons">
+                        meeting_room
+                    </span>
+                    Sair
+                </a>
+            </li>
+        </ul>
+        <ul class="menu-icon">
+            <span class="material-icons">
+                menu
+            </span>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="content-header">
+            <div class="leagues-box">
+                <span class="material-icons">
+                    emoji_events
+                </span>
+                <h2>Campeonatos</h2>
+            </div>
+            <div class="clubs-box">
+                <span class="material-icons">
+                    sports_soccer
+                </span>
+                <h2>Clubes</h2>
+            </div>
+            <div class="about-box">
+                <span class="material-icons">
+                    info
+                </span>
+                <h2>Sobre</h2>
+            </div>
+            
+        </div>
+        <div class="content-section">
+            <div class="box-content">
+                <div class="slideshow-container">
+                    <div class="item-news fade">
+                        <img src="assets/godin.svg" alt="Godín anunciado pelo Galo" title="Godín anunciado pelo Galo">
+                        <div class="text">
+                            <h2>Galo anuncia Godin, zagueiro da Seleção Uruguaia</h2>
+                            <p>Tríplice coroa em 2021, Galo se reforça para buscar mais conquitas em 2022</p>
+                        </div>
+                    </div>
+                    <div class="item-news fade">
+                        <img src="assets/borja.svg" alt="Borja vendido ao Junior Barranquilla">
+                        <div class="text">
+                            <h2>Partiu, Colombia</h2>
+                            <p>Palmeiras oficializa a venda de Miguel Borja ao Junior Barranquilla.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentNews(1)"></span>
+                    <span class="dot" onclick="currentNews(2)"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="/dashboard">
+                    <span class="material-icons">
+                        home
+                    </span>
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="/club">
+                    <span class="material-icons">
+                        sports_soccer
+                    </span>
+                    Clubes
+                </a>
+            </li>
+            <li>
+                <a href="/" class="logout">
+                    <span class="material-icons">
+                        meeting_room
+                    </span>
+                    Sair
+                </a>
+            </li>
+            <div class="close">
+                <li class="close-menu">
+                    <span class="material-icons">
+                        close
+                    </span>
+                </li>
+            </div>
+        </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        document.body.addEventListener("load", () => close("/"))
+        let leaguesBox = document.querySelector(".leagues-box");
+        leaguesBox.addEventListener("click", () => {
+            open("/league" , "_self")
+        })
+        let clubsBox = document.querySelector(".clubs-box");
+        clubsBox.addEventListener("click", () => {
+            open("/club", "_self")
+        })
+        let aboutBox = document.querySelector(".about-box");
+        aboutBox.addEventListener("click", () => {
+            open("/about", "_self")
+        })
+
+        let newsIndex = 1;
+        showNews(newsIndex);
+
+        nextNews = (n) => showNews(newsIndex += n);
+        currentNews = (n) => showNews(newsIndex = n);
+
+        function showNews(n){
+            let i;
+            let news = document.getElementsByClassName("item-news");
+            let dots = document.getElementsByClassName("dot");
+
+            if (n > news.length) return newsIndex = 1;
+            if (n < 1) return newsIndex = news.length;
+            for (i = 0; i < news.length; i++) {
+                news[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            news[newsIndex - 1].style.display = "block";
+            dots[newsIndex - 1].className += " active";
+        }
+
+    </script>
+    <script src="scripts/menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,716 @@
+/*White Shades*/
+/*Black shades*/
+/*Blue Shades*/
+/*Orange Shades*/
+/*Other Shades */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  background-color: #050a3b;
+}
+
+body {
+  height: auto !important;
+}
+
+input {
+  width: 100%;
+}
+
+/*Sidebar*/
+.sidebar {
+  height: 10vh;
+  background-color: #05037e;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.sidebar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100%;
+}
+
+.sidebar ul li {
+  padding: .75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sidebar ul li a {
+  color: #00a1ff;
+  text-decoration: none;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .25rem;
+  font-weight: 600;
+}
+
+.sidebar ul li a img {
+  width: 90% !important;
+  height: 90%;
+}
+
+.sidebar ul li .logout {
+  background-color: red;
+  border-radius: 1rem;
+  padding: .25rem 1rem;
+  color: #fff;
+}
+
+.sidebar ul.list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar ul.logo li {
+  height: auto !important;
+}
+
+.sidebar ul.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Menu */
+.menu {
+  background-color: #05037e;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .5rem 0;
+  gap: 1rem;
+  color: #00a1ff;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.active-menu {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100;
+  background: #050047;
+  inset: 0;
+  overflow: hidden;
+}
+
+.close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.close .close-menu {
+  text-align: center;
+  margin-top: 3rem;
+  font-weight: lighter;
+  border: black;
+  height: 4rem;
+  width: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+}
+
+.close .close-menu .material-icons {
+  color: #fff;
+  font-size: 3rem;
+}
+
+/* Matches */
+.row {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: grey;
+  width: 100% !important;
+}
+
+.card {
+  width: 10%;
+  padding: .75rem;
+  border: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-bottom: .95rem;
+  margin-right: 1rem;
+  border-radius: .5rem;
+  -webkit-filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1));
+          filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+/*White Shades*/
+/*Black shades*/
+/*Blue Shades*/
+/*Orange Shades*/
+/*Other Shades */
+h2, h3 {
+  color: #00a1ff;
+}
+
+.content {
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+  gap: 1rem !important;
+  overflow-y: auto;
+}
+
+.content #standing {
+  width: 33.33%;
+  height: auto;
+  overflow-y: hidden;
+  border-radius: 1rem;
+  color: white;
+}
+
+.content #standing .club-match, .content #standing .club-win, .content #standing .club-draw, .content #standing .club-lost,
+.content #standing .club-goalScored, .content #standing .club-goalAgainst, .content #standing .club-points {
+  text-align: center;
+  padding: .065rem;
+}
+
+.content #standing .club-ranking {
+  padding: 1.25rem;
+  margin: 30px auto;
+  background-color: transparent;
+  color: #00a1ff;
+  -webkit-box-shadow: 3px 3px 3px rgba(5, 0, 71, 0.35);
+          box-shadow: 3px 3px 3px rgba(5, 0, 71, 0.35);
+  overflow: hidden;
+}
+
+.content #standing .club-ranking h4 {
+  margin: 0 0 6px 0;
+}
+
+.content #standing .club-ranking .position {
+  text-align: center;
+}
+
+.content #standing .club-ranking .club-name {
+  padding-left: .5rem;
+}
+
+.content #standing .club-ranking:hover {
+  background: #00a1ff;
+  color: white;
+}
+
+.content #standing td {
+  font-size: .9rem;
+  font-weight: normal;
+  margin: 0 0 1rem 0;
+}
+
+.content #standing .position {
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+.content .highlights {
+  width: 33.33%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.content .highlights .top-score, .content .highlights .top-assist {
+  height: 50%;
+  width: 100%;
+  overflow-y: auto;
+  margin: .75rem 0;
+  padding: .5rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #00a1ff, #05037e, #05037e);
+}
+
+.content .highlights .top-score h3, .content .highlights .top-assist h3 {
+  margin: 3rem 0;
+}
+
+.content .highlights .top-score p, .content .highlights .top-assist p {
+  color: white;
+  font-size: .875rem;
+}
+
+.content .highlights .top-score small, .content .highlights .top-assist small {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.content .highlights .top-score::-webkit-scrollbar, .content .highlights .top-assist::-webkit-scrollbar {
+  width: .275rem;
+  height: .275rem;
+}
+
+.content .highlights .top-score::-webkit-scrollbar-thumb, .content .highlights .top-assist::-webkit-scrollbar-thumb {
+  background-color: #0133c9;
+  border-radius: .75rem;
+}
+
+.content .highlights .top-score::-webkit-scrollbar-track, .content .highlights .top-assist::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.content .highlights .top-score-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 .25rem;
+}
+
+.content .highlights .top-score-item .photo {
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #050047;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f79627;
+}
+
+.content .highlights .top-score-item .player {
+  padding: 0 1rem;
+  width: 75%;
+}
+
+.content .news-matchday {
+  width: 33%;
+  overflow: hidden;
+  height: 100%;
+}
+
+.content .news-matchday .matchday {
+  height: 50%;
+  width: 100%;
+  padding: 1rem 0;
+  overflow-y: auto;
+}
+
+.content .news-matchday .matchday h3 {
+  margin: 1rem 0;
+  width: 100%;
+  background-color: var(--white);
+}
+
+.content .news-matchday .matchday .matchday-item {
+  margin-bottom: .5rem;
+  font-size: .85rem;
+  background: -webkit-gradient(linear, left top, right top, from(#00a1ff), color-stop(#05037e), to(#05037e));
+  background: linear-gradient(to right, #00a1ff, #05037e, #05037e);
+  padding: 1rem;
+  color: #f3f3f3;
+  border-radius: 1rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content .news-matchday .matchday .card {
+  width: 65% !important;
+}
+
+.leagues {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.leagues h2 {
+  margin: 2rem 0;
+}
+
+.leagues .league-item .league-name {
+  text-decoration: none;
+  color: #00a1ff;
+}
+
+.leagues .league-item .league-name:hover {
+  cursor: pointer;
+}
+
+.leagues .league-item .league-country {
+  color: white;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+}
+
+.main .container {
+  width: 100%;
+}
+
+/*
+overflow: hidden;
+    height: 100%;*/
+@media (max-width: 575.98px) {
+  body .sidebar ul li a img {
+    width: 100% !important;
+    height: 100%;
+  }
+  body .sidebar ul.list-item {
+    display: none !important;
+  }
+  body .sidebar ul.logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: .5rem 0;
+  }
+  body .sidebar ul.logo li {
+    width: 62%;
+    padding: 0;
+  }
+  body .content {
+    width: 100%;
+    height: 100%;
+    background-color: #050a3b !important;
+    padding: 1rem;
+    gap: 0;
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    overflow-y: scroll;
+  }
+  body .content .content-header, body .content .content-section, body .content #standing, body .content .highlights, body .content .news-matchday {
+    width: 100%;
+  }
+  body .content .highlights {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body .content .news-matchday {
+    height: auto;
+  }
+  body .content .news-matchday .matchday {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+    height: auto;
+    margin: 2rem 0;
+    width: 100%;
+  }
+  body .content .news-matchday .matchday .matchday-item {
+    border-radius: 1rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body {
+    background-color: #050a3b;
+  }
+  body .sidebar {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body .sidebar ul li a img {
+    width: 100% !important;
+    height: 100%;
+  }
+  body .sidebar ul.list-item {
+    display: none !important;
+  }
+  body .sidebar ul.logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: .5rem 0;
+  }
+  body .sidebar ul.logo li {
+    width: 100%;
+    padding: 0;
+  }
+  body .content {
+    height: 100%;
+    width: 100%;
+    display: block;
+    overflow-y: scroll;
+  }
+  body .content .content-header, body .content .content-section, body .content #standing, body .content .highlights, body .content .news-matchday {
+    width: 100%;
+  }
+  body .content .news-matchday {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    height: auto !important;
+    height: auto;
+  }
+  body .content .news-matchday .matchday {
+    height: auto !important;
+  }
+  body .content .news-matchday .matchday .card {
+    width: 25% !important;
+    border-radius: 1rem !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  body .content {
+    height: 100%;
+    width: 100%;
+    display: block;
+    overflow-y: scroll;
+  }
+  body .content .content-header, body .content .content-section, body .content #standing, body .content .highlights, body .content .news-matchday {
+    width: 100%;
+  }
+  body .content .news-matchday {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 1rem 0;
+  }
+  body .content .news-matchday .news, body .content .news-matchday .matchday {
+    height: auto;
+  }
+  body .content .news-matchday .matchday .card {
+    width: 20% !important;
+    border-radius: 1rem !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  body .content {
+    height: 100%;
+    width: 100%;
+    display: block;
+    overflow-y: scroll;
+  }
+  body .content .content-header, body .content .content-section, body .content #standing, body .content .highlights, body .content .news-matchday {
+    width: 100%;
+  }
+  body .content .news-matchday {
+    height: 65%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 1rem 0;
+  }
+  body .content .news-matchday .matchday {
+    height: auto;
+  }
+  body .content .news-matchday .matchday .card {
+    width: 20% !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content #standing {
+    width: 33.33%;
+    height: 100%;
+    overflow-y: hidden;
+    border-radius: 1rem;
+    color: white;
+  }
+  .content .news-matchday {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1rem;
+    padding: .75rem 0;
+  }
+  .content .news-matchday h3 {
+    padding-bottom: .5rem;
+  }
+  .content .news-matchday .matchday {
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .content .news-matchday .matchday .matchday-item {
+    width: 100% !important;
+    border-radius: 1rem !important;
+  }
+  .content .news-matchday .matchday::-webkit-scrollbar {
+    width: .275rem;
+    height: .275rem;
+  }
+  .content .news-matchday .matchday::-webkit-scrollbar-thumb {
+    background-color: #0133c9;
+    border-radius: .75rem;
+  }
+  .content .news-matchday .matchday::-webkit-scrollbar-track, .content .news-matchday .matchday .content .highlights .top-assist::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+/*# sourceMappingURL=league.css.map */

@@ -1,0 +1,108 @@
+[
+    {
+        "id": 1,
+        "club": "Palmeiras",
+        "player": [
+            {
+                "id": "SEP_01",
+                "name": "Weverton",
+                "position": "Goleiro",
+                "shirt": 23,
+                "age": 34,
+                "marketValue": "€ 6 mi"
+            },
+            {
+                "id": "SEP_02",
+                "name": "Vinicius Silvestre",
+                "position": "Goleiro",
+                "shirt": 1,
+                "age": 27,
+                "marketValue": "€ 400 mil"
+            },
+            {
+                "id": "SEP_03",
+                "name": "Marcelo Lomba",
+                "position": "Goleiro",
+                "shirt": 42,
+                "age": 34,
+                "marketValue": "€ 900 mil"
+            },
+            {
+                "id": "SEP_04",
+                "name": "Renan",
+                "position": "Zagueiro",
+                "shirt": 3,
+                "age": 19,
+                "marketValue": "€ 9.0 mi"
+            },
+            {
+                "id": "SEP_05",
+                "name": "Gustavo Goméz",
+                "position": "Zagueiro",
+                "shirt": 15,
+                "age": 28,
+                "marketValue": "€ 8.0 mi"
+            },
+            {
+                "id": "SEP_06",
+                "name": "Luan",
+                "position": "Zagueiro",
+                "shirt": 13,
+                "age": 28,
+                "marketValue": "€ 3.0 mi"
+            },
+            {
+                "id": "SEP_07",
+                "name": "Murilo Cerqueira",
+                "position": "Zagueiro",
+                "shirt": 26,
+                "age": 24,
+                "marketValue": "€ 2.0 mi"
+            },
+            {
+                "id": "SEP_08",
+                "name": "Henri",
+                "position": "Zagueiro",
+                "shirt": 44,
+                "age": 19,
+                "marketValue": "€ 2.0 mi"
+            },
+            {
+                "id": "SEP_09",
+                "name": "Benjamín Kuscevic",
+                "position": "Zagueiro",
+                "shirt": 4,
+                "age": 19,
+                "marketValue": "€ 1.7 mi"
+            },
+            {
+                "id": "SEP_10",
+                "name": "Jorge",
+                "position": "Lateral",
+                "shirt": 22,
+                "age": 23,
+                "marketValue": "€ 2.5 mi"
+            },
+            {
+                "id": "SEP_11",
+                "name": "Joaquín Piquerez",
+                "position": "Lateral",
+                "shirt": 6,
+                "age": 25,
+                "marketValue": "€ 2.8 mi"
+            }
+        ],
+        "league": [
+            {
+                "name":"Paulistão"
+            },
+            {
+                "name":"Libertadores"
+            },
+            {
+                "name":"Campeonato Brasileiro"
+            }
+        ],
+        "route": "league/bra/corinthians"
+    }
+]

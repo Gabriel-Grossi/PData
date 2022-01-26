@@ -1,0 +1,406 @@
+@import "global";
+@import "colors";
+
+h2, h3{
+    color: $softBlue;
+}
+
+.content{
+    flex-direction: row !important; 
+    gap: 1rem !important;
+    overflow-y: auto;
+    
+    #standing{
+        width: 33.33%;
+        height: auto;
+        overflow-y: hidden;
+        border-radius: 1rem;
+        color: $white;
+        .club-match,.club-win,.club-draw, .club-lost,
+        .club-goalScored, .club-goalAgainst, .club-points{
+            text-align: center;
+            padding: .065rem;
+        }
+        .club-ranking {
+            padding: 1.25rem;
+            margin: 30px auto;
+            background-color: transparent;
+            color: $softBlue;
+            box-shadow: 3px 3px 3px rgba(5, 0, 71, 0.35)/*rgba(0, 0, 0, 0.1)*/;
+            overflow: hidden;
+            h4 {
+                margin: 0 0 6px 0;
+            }
+            .position{
+                text-align: center;
+            }
+            .club-name{
+                padding-left: .5rem;
+            }
+
+            &:hover{
+                background: $softBlue;
+                color: $white
+                ;
+            }
+        }
+
+        td {
+            font-size: .9rem;
+            font-weight: normal;
+            margin: 0 0 1rem 0;
+        }
+
+        .position {
+            font-size: 0.9rem;
+            vertical-align: middle;
+        }
+    }
+
+    .highlights{
+        width: 33.33%; 
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        .top-score, .top-assist{
+            height: 50%;
+            width: 100%;
+            overflow-y: auto;
+            margin: .75rem 0;
+            padding: .5rem;
+            border-radius: 1rem;
+            background: linear-gradient(135deg, $softBlue, $mediumBlue, $mediumBlue);
+            h3{
+                margin: 3rem 0;
+            }
+            
+            p{
+                color: $white;
+                font-size: .875rem
+            }
+            small{
+                color:rgba(255,255,255,.5);
+            }
+
+            &::-webkit-scrollbar {
+                width: .275rem;
+                height: .275rem;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: $borderBlue;
+                border-radius: .75rem;
+            }
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+        }
+        .top-score-item{
+            display: flex;
+            align-items: center;
+            padding: 0 .25rem;
+            .photo{
+                height: 2.5rem;
+                width: 2.5rem;
+                background-color:rgb(5, 0, 71);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: rgb(247, 150, 39);
+            }
+            .player{
+                padding: 0 1rem;
+                width: 75%;
+            }
+        }
+    }
+    .news-matchday{
+        width: 33%;
+        overflow: hidden;
+        height: 100%;
+        .matchday{
+            height: 50%;
+            width: 100%; 
+            padding: 1rem 0;
+            overflow-y: auto;
+            h3{
+                margin: 1rem 0;
+                width: 100%;
+                background-color: var(--white);
+            }
+            .matchday-item{
+                margin-bottom: .5rem;
+                font-size: .85rem;
+                background: linear-gradient(to right, #00a1ff,#05037e, #05037e);
+                padding: 1rem;
+                color: #f3f3f3;
+                border-radius: 1rem;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+            }
+            .card{
+                width: 65% !important;
+            }
+        }
+    }
+}
+
+
+.leagues{
+    display: flex;
+    flex-direction: column;
+    h2{
+        margin: 2rem 0;
+    }
+    .league-item{
+        .league-name{
+            text-decoration: none;
+            color: $softBlue;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        .league-country{
+            color: $white;
+        }
+    }
+}
+.main{
+    display: flex;
+    flex-direction: column !important;
+    .container{
+        width: 100%;
+    }
+}
+
+/*
+overflow: hidden;
+    height: 100%;*/
+
+    // Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    body{
+        .sidebar{
+            ul{
+                li{ 
+                    a{
+                        img {
+                            width: 100% !important;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+            ul.list-item{
+                display: none !important;
+            }
+            ul.logo{
+                display: flex;
+                justify-content: center;
+                padding: .5rem 0;
+                li{
+                    width: 62%;
+                    padding: 0;
+                }
+            }
+        }
+        .content{
+            width: 100%;
+            height: 100%;
+            background-color: #050a3b !important;
+            padding: 1rem;
+            gap: 0;
+            display: block;
+            flex-direction: column-reverse;
+            overflow-y:scroll;
+            .content-header, .content-section, #standing, .highlights, .news-matchday{
+                width: 100%;
+            }
+
+            .highlights{
+                display: flex;
+            }
+
+            .news-matchday{
+                height: auto;
+                .matchday{
+                    display: flex;
+                    gap: 1rem;
+                    height: auto;
+                    margin: 2rem 0;
+                    width: 100%;
+                    .matchday-item{
+                        border-radius: 1rem;
+                    }
+                    
+                }
+            }             
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    body{
+        background-color: #050a3b;
+        .sidebar{
+            justify-content: space-between;
+            ul{
+                li{ 
+                    a{
+                        img {
+                            width: 100% !important;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+            ul.list-item{
+                display: none !important;
+            }
+            ul.logo{
+                display: flex;
+                justify-content: center;
+                padding: .5rem 0;
+                li{
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+        }
+        .content{
+            height: 100%;
+            width: 100%;
+            display: block;
+            overflow-y: scroll;
+            .content-header, .content-section, #standing, .highlights, .news-matchday{
+                width: 100%;
+            }
+
+            .news-matchday{
+                display: flex;
+                gap: 1rem;
+                margin: 1rem 0;
+                padding: 1rem 0;
+                height: auto !important;
+                height: auto;
+                .matchday{
+                    height: auto !important;
+                    .card{
+                        width: 25% !important;
+                        border-radius: 1rem !important;
+                    }
+                }
+            }
+        }
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {  
+    body{
+        .content{
+            height: 100%;
+            width: 100%;
+            display: block;
+            overflow-y: scroll;
+            .content-header, .content-section, #standing, .highlights, .news-matchday{
+                width: 100%;
+            }
+            .news-matchday{
+                height: auto;
+                display: flex;
+                gap: 1rem;
+                margin: 1rem 0;
+                padding: 1rem 0;
+                .news, .matchday{
+                    height: auto;
+                }
+                .matchday{
+                    .card{
+                        width: 20% !important;
+                        border-radius: 1rem !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    body{
+        .content{
+            height: 100%;
+            width: 100%;
+            display: block;
+            overflow-y: scroll;
+            .content-header, .content-section, #standing, .highlights, .news-matchday{
+                width: 100%;
+            }
+            .news-matchday{
+                height: 65%;
+                display: flex;
+                gap: 1rem;
+                margin: 1rem 0;
+                padding: 1rem 0;
+                .matchday{
+                    height: auto;
+                    .card{
+                        width: 20% !important;
+                    }
+                }
+            }
+        }
+    }
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+    .content {
+        #standing {
+            width: 33.33%;
+            height: 100%;
+            overflow-y: hidden;
+            border-radius: 1rem;
+            color: $white;
+        }
+        .news-matchday{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: .75rem 0;
+
+            h3{
+                padding-bottom: .5rem;
+            }
+            .matchday{
+                height: 100%;
+                flex-direction: column;
+
+                .matchday-item{
+                    width: 100% !important;
+                    border-radius: 1rem !important;
+                }
+
+                &::-webkit-scrollbar {
+                    width: .275rem;
+                    height: .275rem;
+                }
+                
+                &::-webkit-scrollbar-thumb{
+                    background-color: $borderBlue;
+                    border-radius: .75rem;
+                }
+                &::-webkit-scrollbar-track, .content .highlights .top-assist::-webkit-scrollbar-track {
+                    background: transparent;
+                }
+            }
+        }
+    }
+ }
