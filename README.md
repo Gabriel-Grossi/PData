@@ -8,6 +8,7 @@ O PData é uma aplicação desenvolvida com o intuito de mostrar dinamicamente a
 
 ## Techs :computer:
 
+* Express.js
 * EJS
 * HTML
 * JS
